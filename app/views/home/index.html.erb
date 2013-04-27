@@ -3,3 +3,6 @@
   <%= password_field_tag 'user[password]'%>
   <%=submit_tag 'login'%>
 <%end%>
+
+<%=link_to_if(logged_in?, "Logout", logout_url, :method=>:delete)%>
+<%=logged_in?%>
