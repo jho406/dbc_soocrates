@@ -4,8 +4,8 @@ class QuestionsController < ApplicationController
   end
   
   def create
-    question = current_user.questions.new(params[:question])
-    if question.save
+    @question = current_user.questions.new(params[:question])
+    if @question.save
       redirect_to questions_path
     else
       render :index
