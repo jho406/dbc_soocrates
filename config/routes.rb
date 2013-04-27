@@ -1,10 +1,14 @@
 Soocrates::Application.routes.draw do
   root :to => 'home#index'
-  post '/login'=> 'sessions#create', :as=>:login
-  delete '/logout' => 'sessions#delete', :as=>:logout
+  post '/login'=> 'sessions#create',      :as=>:login
+  delete '/logout' => 'sessions#delete',  :as=>:logout
 
-  resource :sessions, :only=>[:create, :delete]
-
+  resources :sessions,  :only=>[:create, :delete]
+  resources :questions, :only=>[:create, :index] do 
+    member do 
+      put :resolve
+    end
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
