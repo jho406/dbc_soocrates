@@ -24,5 +24,5 @@ phase3.units.create(:title=>"Week 7: Rails Crash Course")
 phase3.units.create(:title=>"Week 8: Wargames")
 phase3.units.create(:title=>"Week 9: Final Projects")
 
-Unit.first.challenges<<Challenge.create(:title=>"Deaf Grandma Challenge", :body=>"test")
+Unit.first.challenges<<user.created_challenges.create(:title=>"Deaf Grandma Challenge", :body=>"test")
 
