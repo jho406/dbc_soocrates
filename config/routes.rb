@@ -9,7 +9,8 @@ Soocrates::Application.routes.draw do
       put :resolve
     end
   end
-
+  resources :challenges
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
