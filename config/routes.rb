@@ -3,8 +3,8 @@ Soocrates::Application.routes.draw do
   post '/login'=> 'sessions#create', :as=>:login
   delete '/logout' => 'sessions#delete', :as=>:logout
 
-  resource :sessions, :only=>[:create, :delete]
-
+  resources :sessions, :only=>[:create, :delete]
+  resources :activities, :only=>[:create, :index]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

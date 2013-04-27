@@ -15,7 +15,8 @@ ActiveRecord::Schema.define(:version => 20130427184835) do
 
   create_table "activities", :force => true do |t|
     t.string   "body"
-    t.string   "type"
+    t.string   "category"
+    t.integer  "user_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

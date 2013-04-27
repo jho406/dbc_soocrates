@@ -1,0 +1,12 @@
+<%=form_for @activity do |f|%>
+  <%=f.text_area :body%>
+  <%=f.hidden_field :category, :value=>"question" %>
+  <%=f.submit :submit%>
+<%end%>
+<ul>
+<%@activities.each do |a|%>
+  <li><%=a.body%> - <%=a.category%> </li>
+<%end%>
+</ul>
+
+<!-- http://socrates.devbootcamp.com/questions/45/resolve -->
