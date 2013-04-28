@@ -1,0 +1,11 @@
+[1m[32m      create[0m  app/controllers/profile_controller.rb
+[1m[37m      invoke[0m  erb
+[1m[32m      create[0m    app/views/profile
+[1m[37m      invoke[0m  rspec
+[1m[32m      create[0m    spec/controllers/profile_controller_spec.rb
+[1m[31m       error[0m   [not found]
+[1m[37m      invoke[0m  assets
+[1m[37m      invoke[0m    coffee
+[1m[32m      create[0m      app/assets/javascripts/profile.js.coffee
+[1m[37m      invoke[0m    scss
+[1m[32m      create[0m      app/assets/stylesheets/profile.css.scss
