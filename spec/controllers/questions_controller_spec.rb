@@ -23,10 +23,10 @@ describe QuestionsController do
   end
 
   it "should resolve a question" do
-    question = user.questions.create!(:body=>"test") 
-    expect{
-      post :resolve, :format=>:json, :question=>{:body=>"test1"}
-      }.to change(Question,:count).by(1)
+    question = user.questions.create(:body=>"test") 
+    put :resolve, :format=>:json, :id=>question.id
+    question.reload
+    question.resolved.should be_true
   end
 
 end

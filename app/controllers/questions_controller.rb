@@ -14,7 +14,8 @@ class QuestionsController < ApplicationController
   end
 
   def resolve
-    current_user.questions.find(params[:id]).resolve!
-    redirect_to :back
+    question = current_user.questions.find(params[:id])
+    question.resolve!
+    head :status=>:ok, :content_type => 'application/json', :location=>questions_path
   end
 end
