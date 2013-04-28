@@ -37,6 +37,12 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # To use debugger
 # gem 'debugger'
 
+
+gem 'rabl'
+gem 'oj'
+
 group :test, :development do
   gem "rspec-rails", "~> 2.0"
+  gem "rack-test"
+  gem 'capybara'
 end
