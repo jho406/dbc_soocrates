@@ -10,6 +10,8 @@ Soocrates::Application.routes.draw do
     end
   end
   resources :challenges
-  
+  resources :units
+  get '/profile' => 'profile#show', :as=>:profile
+
   
 end
