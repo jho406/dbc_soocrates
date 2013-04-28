@@ -1,4 +1,5 @@
 class Question < ActiveRecord::Base
+  act_as_chirpable
   belongs_to :user
   attr_accessible :body
 
